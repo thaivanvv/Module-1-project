@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav class="screen-dashboard-nav">
+      <div class="dashboard-nav-left">
+        <img src="../assets/images/trello-logo-icon.png" alt="" />
+      </div>
+    </nav>
+
+    <div class="body-nav">
+      <div class="body-left">
+        <div class="body-column-top">
+          <h3>YOUR DASHBOARD</h3>
+          <div class="user-dashboard-bar">
+            <i class="fa-solid fa-list-ul"></i>
+            <span>User dashboard</span>
+          </div>
+          <div class="add-new-user-bar">
+            <i class="fa-regular fa-star"></i>
+            <div class="span">Add new user</div>
+          </div>
+        </div>
+        <div class="body-column-bottom">
+          <i class="fa-solid fa-door-closed"></i>
+          <div class="span" id="signOut">Sign out</div>
+        </div>
+      </div>
+
+      <div class="body-right">
+        <div class="dashboard-title">
+          <div class="title">
+            <img src="../assets/icons/black-list-ul.png" alt="" />
+            <span>User Management</span>
+          </div>
+          <hr />
+        </div>
+
+        <div class="dashboard-search">
+          <input
+            type="text"
+            class="dashboard-inputToSearch"
+            name="search"
+            placeholder="Search user by name"
+          />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <table class="table-information">
+          <thead>
+            <tr>
+              <th class="col-1">User code</th>
+              <th class="col-2">Username</th>
+              <th class="col-3">Email</th>
+              <th class="col-4">Role</th>
+              <th class="col-5">Birthday</th>
+              <th class="col-6">Status</th>
+              <th class="col-7">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="content"></tbody>
+        </table>
+
+        <div class="notice-page">
+          <button class="arrow-left">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <div class="pages-content"></div>
+          <button class="arrow-right">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/dashboard.js"></script>
+  </body>
+</html>

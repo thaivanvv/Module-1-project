@@ -1,0 +1,43 @@
+.signin-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signin-page-form {
+  display: flex;
+  flex-direction: column;
+}
+h2{
+    font-size: 48px;
+}
+h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+
+#email {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 250px;
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding-left: 10px;
+}
+
+#password {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 250px;
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding-left: 10px;
+}
