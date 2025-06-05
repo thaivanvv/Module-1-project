@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav class="screen-dashboard-nav">
+      <div class="dashboard-nav-left">
+        <img src="../assets/images/trello-logo-icon.png" alt="" />
+      </div>
+    </nav>
+
+    <div class="body-nav">
+      <div class="body-left">
+        <div class="body-column-top">
+          <h3>YOUR DASHBOARD</h3>
+          <div class="user-dashboard-bar">
+            <i class="fa-solid fa-list-ul"></i>
+            <span>User dashboard</span>
+          </div>
+          <div class="add-new-user-bar">
+            <i class="fa-regular fa-star"></i>
+            <div class="span">Add new user</div>
+          </div>
+        </div>
+        <div class="body-column-bottom">
+          <i class="fa-solid fa-door-closed"></i>
+          <div class="span" id="signOut">Sign out</div>
+        </div>
+      </div>
+
+      <div class="body-right">
+        <div class="dashboard-title">
+          <div class="title">
+            <img src="../assets/icons/black-list-ul.png" alt="" />
+            <span>User Management</span>
+          </div>
+          <hr />
+        </div>
+
+        <div class="title-form">Edit user</div>
+        <div class="edit-form-content">
+          <form class="edit-form">
+            <div class="form-up">
+              <div class="content-input codeEmail-content">
+                <div class="content-smallbox">
+                  <label for="userCode">User Code</label>
+                  <input type="text" name="userCode" disabled />
+                </div>
+                <div class="content-smallbox">
+                  <label for="email">Email</label>
+                  <input type="text" name="email" />
+                </div>
+              </div>
+
+              <div class="content-input usernamePassword-content">
+                <div class="content-smallbox">
+                  <label for="userName">Username</label>
+                  <input type="text" name="userName" />
+                </div>
+                <div class="content-smallbox">
+                  <label for="password">Password</label>
+                  <input type="text" name="password" />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-middle">
+              <div class="input-role">
+                <label for="role">Role</label>
+                <select id="role" name="role">
+                  <option value="ADMIN">ADMIN</option>
+                  <option value="USER">USER</option>
+                </select>
+              </div>
+
+              <div class="input-birthday">
+                <label for="birthday">Birthday</label>
+                <input
+                  type="text"
+                  name="date"
+                  placeholder="31/12/2002"
+                  id="date"
+                  onfocus="(this.type='date')"
+                />
+              </div>
+
+              <div class="input-status">
+                <label for="status">Status</label>
+                <div class="status-checkbox">
+                  <div class="active-checkbox">
+                    <input
+                      type="radio"
+                      name="status"
+                      class="active-checked"
+                      id="activeStatus"
+                      value="Active"
+                    />
+                    <label for="activeStatus" class="status">Active</label>
+                  </div>
+                  <div class="deactivate-checkbox">
+                    <input
+                      type="radio"
+                      name="status"
+                      class="deactivate-checked"
+                      id="deactivateStatus"
+                      value="Deactivate"
+                    />
+                    <label for="deactivateStatus" class="status"
+                      >Deactivate</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="description-input">
+              <label for="description">Description</label>
+              <input type="text" id="description" name="description" />
+            </div>
+
+            <div class="form-footer">
+              <button class="backBtn">Back</button>
+              <button class="saveBtn">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/editUser.js"></script>
+  </body>
+</html>
