@@ -66,6 +66,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+let dashboardBack = document.querySelector(".user-dashboard-bar-edit");
+dashboardBack.addEventListener("click", function () {
+  window.location.href = "../pages/dashboard.html";
+});
+
 function renderId(i) {
   return "TR" + String(i).padStart(3, 0);
 }

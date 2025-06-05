@@ -503,7 +503,7 @@
 }
 
 .table-information .col-1,
-.table-information .col2 {
+.table-information .col-2 {
   width: 171px;
 }
 
@@ -615,7 +615,26 @@
   display: inline;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* CSS edit user */
+
+
+
 
  .edit-form-addUser {
   color: #0d6efd;

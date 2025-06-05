@@ -1,6 +1,5 @@
 let users = JSON.parse(localStorage.getItem("users")) || [];
 
-localStorage.removeItem("users");
 let form = document.querySelector(".form-sign-up");
 
 form.onsubmit = function (e) {
@@ -9,7 +8,7 @@ form.onsubmit = function (e) {
   if (checkValidate(form)) {
     // trước khi tạo tài khoản dùng array.some() để kiểm tra xem tk khoản đã được đăng ký chưa
     if (users.some((u) => u.email === form.email.value)) {
-      load_err("This email is already registered");
+      load_err("Email này đã tồn tại");
       return;
     };
 
@@ -18,19 +17,19 @@ form.onsubmit = function (e) {
       email: form.email.value,
       username: form.username.value,
       password: form.password.value,
-      role: null,
-      status: null,
-      birthday: null,
+      role: "",
+      status: "",
+      birthday: "",
     };
     users.push(newUser);
-    load_success("Signing up successfully");
+    load_success("Đăng nhập thành công");
     localStorage.setItem("users", JSON.stringify(users));
 
     form.email.value = "";
     form.username.value = "";
     form.password.value = "";
     setTimeout(() => {
-      if (confirm("Do you want go to sign in of page")) {
+      if (confirm("Bạn có muốn chuyển qua trang đăng nhập không")) {
         setTimeout(() => {
           window.location.href = "../pages/signin.html";
         }, 1000);
@@ -46,38 +45,38 @@ function checkValidate(form) {
     form.username.value === "" &&
     form.password.value == ""
   ) {
-    load_err("Please fill in fields");
+    load_err("Hãy điền vào tất cả các ô");
     check = false;
     return check;
   }
 
   if (form.email.value === "") {
-    load_err("Email cannot be empty");
+    load_err("Email không được để trống");
     check = false;
     return check;
   } else if (!validEmail(form.email.value)) {
-    load_err("Invalid email");
+    load_err("Email không đúng");
     check = false;
     return check;
   }
 
   if (form.username.value === "") {
-    load_err("Username cannot be empty");
+    load_err("Tên người dùng không được để trống");
     check = false;
     return check;
   }
 
   if (form.password.value === "") {
-    load_err("Password cannot be empty");
+    load_err("Mật khẩu không được để trống");
     check = false;
     return check;
   } else if (form.password.value.length < 8) {
-    load_err("Please, the password must be over 8 characters");
+    load_err("Mật khẩu không phải trên 8 chữ số");
     check = false;
     return check;
   } else if (!validPassword(form.password.value)) {
     load_err(
-      "The password must have at least one uppercase letter, one lowercase letter, and one number"
+      "mật khẩu phải có ít nhất một chữ in hoa va số"
     );
     check = false;
     return check;

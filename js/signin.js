@@ -40,19 +40,19 @@ function checkValidate(form) {
     form.email.value === "" &&
     form.password.value == ""
   ) {
-    load_err("Please fill in fields");
+    load_err("Hãy điền vào các ô");
     check = false;
     return check;
   }
 
   if (form.email.value === "") {
-    load_err("Email cannot be empty");
+    load_err("Email không được để trống");
     check = false;
     return check;
   }
 
   if (form.password.value === "") {
-    load_err("Password cannot be empty");
+    load_err("Password không được để trống");
     check = false;
     return check;
   }
